@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body> 
+    <script>
+        document.body.style.display = 'flex'
+        document.body.style.justifyContent = 'center'
+        
+        const mainDiv = document.createElement('div')
+        const textDiv = document.createElement('div')
+        const linksDiv = document.createElement('div')
+        const a1 = document.createElement('a')
+        const a2 = document.createElement('a')
+        const a3 = document.createElement('a')
+
+        mainDiv.style.width = '1200px'
+        mainDiv.style.height = '600px'
+        mainDiv.style.display = 'flex'
+        mainDiv.style.flexDirection = 'column'
+        mainDiv.style.alignItems = 'center'
+        
+        textDiv.style.border = '2px red solid'
+        textDiv.style.borderRadius = '12px'
+        textDiv.style.padding = '12px'
+        textDiv.style.width = '500px'
+        textDiv.style.height = '85px'
+        textDiv.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsum velit distinctio! Quisquam enim beatae doloribus repudiandae facilis quia aspernatur aperiam quaerat esse.'
+        textDiv.style.fontSize  = '20px'
+
+        linksDiv.style.width = '500px'
+        linksDiv.style.height = '50px'
+        linksDiv.style.display = 'flex'
+        linksDiv.style.justifyContent = 'space-between'
+        
+        a1.href = 'https://instagram.com'
+        a1.target = 'blank'
+        a1.textContent = 'instagram'
+        a1.style.fontSize = '22px'
+
+        a2.href = 'https://www.google.com'
+        a2.target = 'blank'
+        a2.textContent = 'google'
+        a2.style.fontSize = '22px'
+        
+        a3.href = 'https://github.com/intocode/intro-dom'
+        a3.target = 'blank'
+        a3.textContent = 'intocode'
+        a3.style.fontSize = '22px'
+        
+        document.body.append(mainDiv)
+
+        mainDiv.append(textDiv)
+        mainDiv.append(linksDiv)
+
+        linksDiv.append(a3)
+        linksDiv.append(a2)
+        linksDiv.append(a1)
+    </script>
+</body>
+</html>
